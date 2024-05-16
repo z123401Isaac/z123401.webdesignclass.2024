@@ -1,0 +1,87 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.pages-container {
+    display: grid;
+}
+
+h1 {
+    color: white;
+    font-size: 200%;
+}
+
+h4 {
+    color: white;
+    
+}
+
+p {
+    color: white;
+}
+
+.description {
+    margin: 1rem 1rem;
+    width: 50%;
+}
+
+.first-page {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: black;
+
+    .name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.second-page {
+    display: grid;
+    grid-template-rows: 60% 40%;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: black;
+    .asia-map {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .Taiwan-map {
+            position: relative;
+            border-radius: 1rem;
+            width: 50dvw;
+            margin: 1rem 1rem;
+        }
+    }
+    .Taiwan-intro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+.third-page {
+    display: grid;
+    grid-template-rows: 60% 40%;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: black;
+    .born-map {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .Hualien-map {
+            position: relative;
+            border-radius: 1rem;
+            height: 50dvh;
+            margin: 1rem 1rem;
+        }
+    }
+    .Hualien-intro {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
