@@ -244,6 +244,16 @@ a {
     overflow: visible;
     view-timeline-name: --section-pin-tl;
     view-timeline-axis: block;
+    .cover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100dvh;
+        font-size: 2rem;
+        #played {
+            color: black;
+        }
+    }
     .game-wrap {
         position: sticky;
         top: 0;

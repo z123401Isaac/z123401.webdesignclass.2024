@@ -236,6 +236,16 @@ a {
   view-timeline-name: --section-pin-tl;
   view-timeline-axis: block;
 }
+.sixth-page .cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  font-size: 2rem;
+}
+.sixth-page .cover #played {
+  color: black;
+}
 .sixth-page .game-wrap {
   position: sticky;
   top: 0;
