@@ -1,0 +1,93 @@
+@keyframes sticky-header {
+  from {
+    height: 100vh;
+    font-size: calc(10vw + 1rem);
+  }
+  to {
+    height: 10vh;
+    font-size: 2rem;
+  }
+}
+
+body {
+  font-family: monospace;
+  margin: 0;
+}
+  
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-image: url('../asset/Taroko_Hill11.jpg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  animation: sticky-header linear both;
+  animation-timeline: scroll();
+  animation-range: 0vh 100vh;
+  
+  h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    translate: -50% -50%;
+    font-weight: normal;
+    font-size: 100%;
+  }
+}
+  
+a {
+    text-decoration: none;
+    font-style: italic;
+    color: black;
+}
+a:visited {
+    color: black;
+}
+
+.image-source {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    
+}
+
+
+:root {
+    --chars: 445;
+}
+  
+@keyframes text-reveal {
+    0% {
+        background-size: 0ch;
+    }
+    100% {
+        background-size: calc(var(--chars) * 10ch);
+    }
+}
+
+.container{
+    height: 340vh;
+    margin: auto;
+    margin-top: calc(110vh);
+    padding: 2rem 1rem;
+    max-width: 900px;
+    text-align: justify;
+    font-size: 2vw;
+    .text {
+        span {
+          background: #eee linear-gradient(to right, #37ecba 0%, #72afd3 100%) 0 / 0
+            no-repeat;
+          background-clip: text;
+          color: transparent;
+          animation: text-reveal steps(var(--chars)) forwards;
+          animation-timeline: view();
+        }
+      }
+}
+ 
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

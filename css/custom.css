@@ -1,0 +1,304 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: calc(0.5dvw + 1rem);
+}
+
+.pages-container {
+  display: grid;
+}
+
+h1 {
+  color: white;
+  font-size: 200%;
+}
+
+h4 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.description {
+  margin: 1rem 1rem;
+  width: 50%;
+}
+
+.first-page {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: black;
+}
+.first-page .name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fade-in-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.second-page {
+  display: grid;
+  grid-template-rows: 60% 40%;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: black;
+}
+.second-page .asia-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.second-page .asia-map .Taiwan-map {
+  position: relative;
+  border-radius: 1rem;
+  width: 50dvw;
+  margin: 1rem 1rem;
+  animation: fade-in-up linear;
+  animation-timeline: view();
+  animation-range: entry-crossing;
+}
+.second-page .Taiwan-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fade-in-up linear;
+  animation-timeline: view();
+  animation-range: entry-crossing;
+}
+
+.third-page {
+  display: grid;
+  grid-template-rows: 60% 40%;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: black;
+}
+.third-page .born-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.third-page .born-map .Hualien-map {
+  position: relative;
+  border-radius: 1rem;
+  height: 50dvh;
+  margin: 1rem 1rem;
+  animation: fade-in-up linear;
+  animation-timeline: view();
+  animation-range: entry-crossing;
+}
+.third-page .Hualien-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fade-in-up linear;
+  animation-timeline: view();
+  animation-range: entry-crossing;
+}
+
+.fourth-page {
+  width: 80dvw;
+  margin: auto;
+  background-color: white;
+  --card-height: 40vw;
+  --card-margin: 4vw;
+  --card-top-offset: 1rem;
+}
+.fourth-page .cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  font-size: 2rem;
+}
+.fourth-page .cover #Hualien-landscape {
+  color: black;
+}
+.fourth-page #card1 {
+  --index: 0;
+}
+.fourth-page #card1 .content {
+  background-image: url(../asset/Taroko_Hill11.jpg);
+}
+.fourth-page #card2 {
+  --index: 1;
+}
+.fourth-page #card2 .content {
+  background-image: url(https://ws.moi.gov.tw/001/Upload/OldFile_TAROKO/WebFiles/Attractions/10718/Filedata636094654685642122.jpg);
+}
+.fourth-page #card3 {
+  --index: 2;
+}
+.fourth-page #card3 .content {
+  background-image: url(../asset/Taiwan_2009_HuaLien_City_CiSingTan_Bay_First_Light_FRD_8235.jpg);
+}
+.fourth-page #card4 {
+  --index: 3;
+}
+.fourth-page #card4 .content {
+  background-image: url(../asset/Liyu_Lake\,_viewing_platform\,_Hualien_County_\(Taiwan\).jpg);
+}
+.fourth-page .stacked .cards {
+  --cards: 4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--cards), var(--card-height));
+  gap: var(--card-margin);
+  margin-bottom: var(--card-margin);
+  padding-bottom: calc(var(--cards) * var(--card-top-offset));
+  list-style: none;
+  view-timeline-name: --stacked-cards;
+}
+.fourth-page .stacked .cards .card {
+  --r-index: calc(var(--cards) - var(--index) - 1);
+  position: sticky;
+  top: 2.5vh;
+  padding-top: calc((var(--index) + 1) * var(--card-top-offset));
+  border: none;
+}
+.fourth-page .stacked .cards .content {
+  --start: calc(var(--index) / var(--cards) * 100%);
+  --end: calc((var(--index) + 1) / var(--cards) * 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-radius: 1rem;
+  background: #fff no-repeat center/cover;
+  color: #fff;
+  font-size: 5vw;
+  box-shadow: 0 0.2em 1rem rgba(0, 0, 0, 0.1);
+  transform-origin: 50% 0%;
+  will-change: transform;
+  overflow: hidden;
+  animation: linear scale forwards;
+  animation-timeline: --stacked-cards;
+  animation-range: exit-crossing var(--start) exit-crossing var(--end);
+}
+
+@keyframes scale {
+  to {
+    transform: scale(calc(1 - 0.1 * var(--r-index)));
+  }
+}
+.fifth-page {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: black;
+}
+.fifth-page .NDHU {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fifth-page .NDHU .NDHU-img {
+  position: relative;
+  border-radius: 1rem;
+  width: 50dvw;
+  margin: 1rem 1rem;
+  animation: fade-in-up linear;
+  animation-timeline: view();
+  animation-range: entry-crossing;
+}
+.fifth-page .NDHU-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fade-in-up linear;
+  animation-timeline: view();
+  animation-range: entry-crossing;
+}
+
+.sixth-page {
+  position: relative;
+  width: unset;
+  height: 500dvh;
+  overflow: visible;
+  view-timeline-name: --section-pin-tl;
+  view-timeline-axis: block;
+}
+.sixth-page .cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  font-size: 2rem;
+}
+.sixth-page .cover #played {
+  color: black;
+}
+.sixth-page .game-wrap {
+  position: sticky;
+  top: 0;
+  width: 100dvw;
+  height: 100dvh;
+  overflow-x: hidden;
+}
+.sixth-page .game-wrap .games {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5em;
+  width: 250vmax;
+  height: 100dvh;
+  will-change: transform;
+  animation: linear move forwards;
+  animation-timeline: --section-pin-tl;
+  animation-range: contain 0% contain 100%;
+}
+.sixth-page .game-wrap .games .img {
+  position: relative;
+  border-radius: 1rem;
+  margin: 1rem 1rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+.sixth-page .game-wrap .games .img:hover {
+  transform: scale(1.1);
+}
+
+.final-page {
+  height: 100dvh;
+  background-color: black;
+}
+.final-page .thanks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+}
+
+.copyright {
+  text-align: center;
+  color: black;
+  font-size: 50%;
+}
+
+@keyframes move {
+  to {
+    transform: translateX(calc(-100% + 100dvw));
+    left: 0;
+  }
+}
+
+/*# sourceMappingURL=custom.css.map */
