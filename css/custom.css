@@ -272,6 +272,7 @@ a {
   cursor: pointer;
   z-index: 1;
   transition: transform 0.3s;
+  box-shadow: 0 0.2em 1rem rgba(0, 0, 0, 0.1);
 }
 .sixth-page .game-wrap .games .img:hover {
   transform: scale(1.1);
