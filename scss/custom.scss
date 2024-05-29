@@ -40,6 +40,10 @@ a {
     height: 100dvh;
     background-color: black;
 
+    .cat {
+        border-radius: 50%;
+    }
+
     .name {
         display: flex;
         align-items: center;
@@ -157,7 +161,7 @@ a {
     #card4 {
         --index: 3;
         .content {
-            background-image: url(../asset/Liyu_Lake\,_viewing_platform\,_Hualien_County_\(Taiwan\).jpg);
+            background-image: url(../asset/.jpg);
         }
     }
     .stacked {
